@@ -23,10 +23,11 @@ In addition, there isn't generated any `(vi, vi)` edge (single edged loops).
 Obviously, the generated file will contain `E+2` lines, where `E` can't be greater than `V*(V-1)`
 
 ## Usage
-From a Unix-like terminal type `./gengraph.sh V E C`, where:
-* V is the number of vertex. It must be greater than 0.
-* E is the number of edges. It will be cropped to `V*(V-1)`
-* C is the maximum cost. It must be greateh than 0. 
+From a Unix-like terminal type `./gengraph.sh V E [C] [-u]`, where:
+* `V` is the number of vertex. Mandatory. It must be greater than 0.
+* `E` is the number of edges. Mandatory. It will be cropped to `V*(V-1)`
+* `C` is the maximum cost. Optional. If not present, equal or less than 0, an unweighted graph is produced
+* `-u`, if present, indicates that the graph should be undirected. Optional.
 
 For example, executing `./gengraph.sh 3 5 1` it will output the following:
 
